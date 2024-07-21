@@ -19,3 +19,7 @@ sketchArea.style.width = `${GRIDSIDE}px`;
 sketchArea.style.height = `${GRIDSIDE}px`;
 
 body.appendChild(sketchArea);
+
+let buttonsArea = document.createElement("div");
+buttonsArea.classList.add("btns-Area");
+
