@@ -8,6 +8,9 @@ let changeGridButton = document.createElement("button");
 changeGridButton.textContent = "Change Grid";
 changeGridButton.classList.add("btn");
 changeGridButton.classList.add("grid-btn");
+changeGridButton.addEventListener("click", () => {
+    changeGrid();
+})
 body.appendChild(changeGridButton);
 
 const GRIDSIDE = 900;
@@ -45,6 +48,9 @@ buttonsArea.appendChild(randomColorButton);
 
 body.appendChild(buttonsArea);
 
+createSketchCells();
+
+
 function createSketchCells() {
     for (let i = 0; i < (squaresPerSide * squaresPerSide); i++) {
         
@@ -58,5 +64,23 @@ function createSketchCells() {
     }
 }
 
+function changeGrid() {
+    let newAmountOfSquares = Number(prompt("How many cells per side? (Use a round number between 2-100)"));
 
-createSketchCells();
+    if (typeof newAmountOfSquares === "number") {
+            
+        if ((newAmountOfSquares >= 2 && newAmountOfSquares <= 100) && (newAmountOfSquares % 1 == 0)) {
+    
+            sketchArea.textContent="";
+            squaresPerSide = newAmountOfSquares;
+            notNumber = false;
+            createSketchCells();
+        }else{
+            alert("Choose a round number between 2-100")
+        }
+            
+    }else{
+        alert("Use a number");        
+    }
+}
+
