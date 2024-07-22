@@ -44,3 +44,19 @@ buttonsArea.appendChild(randomColorButton);
 
 
 body.appendChild(buttonsArea);
+
+function createSketchCells() {
+    for (let i = 0; i < (squaresPerSide * squaresPerSide); i++) {
+        
+        let cell = document.createElement("div");
+        cell.style.width = `${(GRIDSIDE/squaresPerSide)}px`;
+        cell.style.height = `${(GRIDSIDE/squaresPerSide)}px`;
+        cell.classList.add("cell");
+
+        sketchArea.appendChild(cell);
+        
+    }
+}
+
+
+createSketchCells();
