@@ -98,9 +98,14 @@ function paintBlack() {
     let cells = document.querySelectorAll(".cell");
 
     cells.forEach((cell) => {
+        let mouseOverCount = 0;
         
         cell.addEventListener("mouseover", () =>{
-
+            
+            if (mouseOverCount < 10) {
+                mouseOverCount ++;
+                cell.style["opacity"] = `${mouseOverCount}0%`;
+            }
             cell.style["background-color"] = "black";
         })
     }
@@ -110,9 +115,14 @@ function paintRed() {
     let cells = document.querySelectorAll(".cell");
 
     cells.forEach((cell) => {
+        let mouseOverCount = 0;
 
         cell.addEventListener("mouseover", () =>{
 
+            if (mouseOverCount < 10) {
+                mouseOverCount ++;
+                cell.style["opacity"] = `${mouseOverCount}0%`;
+            }
             cell.style["background-color"] = "red";
         })
     }
@@ -121,9 +131,14 @@ function paintRed() {
 function paintRandom() {
     let cells = document.querySelectorAll(".cell");    
     cells.forEach((cell) => {
+        let mouseOverCount = 0;
 
         cell.addEventListener("mouseover", () =>{
        
+            if (mouseOverCount < 10) {
+                mouseOverCount ++;
+                cell.style["opacity"] = `${mouseOverCount}0%`;
+            }
             cell.style["background-color"] = `rgb(${Math.floor((Math.random() *  255) + 1)},${Math.floor((Math.random() *  255) + 1)},${Math.floor((Math.random() *  255) + 1)})`;
             
         })
