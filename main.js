@@ -29,16 +29,25 @@ buttonsArea.classList.add("btns-Area");
 let paintBlackButton = document.createElement("button");
 paintBlackButton.textContent = "Paint Black"
 paintBlackButton.classList.add("btn");
+paintBlackButton.addEventListener("click", () =>{
+    paintBlack();
+})
 
 
 let paintRedButton = document.createElement("button");
 paintRedButton.textContent = "Paint Red"
 paintRedButton.classList.add("btn");
+paintRedButton.addEventListener("click", () =>{
+    paintRed();
+})
 
 
 let randomColorButton = document.createElement("button");
 randomColorButton.textContent = "Random Colors"
 randomColorButton.classList.add("btn");
+randomColorButton.addEventListener("click", () =>{
+    paintRandom();
+})
 
 
 buttonsArea.appendChild(paintBlackButton);
@@ -82,5 +91,42 @@ function changeGrid() {
     }else{
         alert("Use a number");        
     }
+}
+
+
+function paintBlack() {
+    let cells = document.querySelectorAll(".cell");
+
+    cells.forEach((cell) => {
+        
+        cell.addEventListener("mouseover", () =>{
+
+            cell.style["background-color"] = "black";
+        })
+    }
+)}
+
+function paintRed() {
+    let cells = document.querySelectorAll(".cell");
+
+    cells.forEach((cell) => {
+
+        cell.addEventListener("mouseover", () =>{
+
+            cell.style["background-color"] = "red";
+        })
+    }
+)}
+
+function paintRandom() {
+    let cells = document.querySelectorAll(".cell");    
+    cells.forEach((cell) => {
+
+        cell.addEventListener("mouseover", () =>{
+       
+            cell.style["background-color"] = `rgb(${Math.floor((Math.random() *  255) + 1)},${Math.floor((Math.random() *  255) + 1)},${Math.floor((Math.random() *  255) + 1)})`;
+            
+        })
+    })
 }
 
