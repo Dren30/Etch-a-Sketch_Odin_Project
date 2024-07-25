@@ -24,3 +24,20 @@ h1 {
 .cell {
     border: 1px solid whitesmoke;
 }
+
+.btn {
+    background-color: rgb(245, 239, 239);
+    color: black;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 500px;
+    border: 1px solid transparent;
+    letter-spacing: 1px;
+    min-width: 180px;
+    text-transform: uppercase;
+    text-align: center;
+    height: 40px;
+    margin: 15px auto;
+
+}
