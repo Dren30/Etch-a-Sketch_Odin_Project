@@ -53,3 +53,8 @@ h1 {
     margin: 20px auto;
     width: 800px;
 }
+
+.btns-Area .btn:nth-child(3)  {
+    padding: 0 15px;
+}
+ 
