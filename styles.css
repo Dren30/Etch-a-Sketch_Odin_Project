@@ -44,5 +44,12 @@ h1 {
 
 .grid-btn {
     display: block;
-    
+}
+
+.btns-Area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 800px;
 }
